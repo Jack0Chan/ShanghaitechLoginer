@@ -19,7 +19,7 @@ def collect_data(text, name, endtag):
     res = raw_data[raw_data.find('value=')+7:-2]##-2
     return res
 
-def login(studentid, password):
+def login(studentid:str, password:str) -> requests.Session:
     url = r"https://ids.shanghaitech.edu.cn/authserver/login?service="
     new_session = requests.session()
     new_session.cookies.clear()
